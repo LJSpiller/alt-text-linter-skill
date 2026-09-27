@@ -1,5 +1,5 @@
 ---
-name: alt-text-validator
+name: alt-text-linter-skill
 description: Audits and generates accessibility alt text for technical documentation based on WCAG standards and corporate style rules. Trigger when evaluating alt text, auditing Markdown image tags, or writing visual descriptions.
 ---
 
