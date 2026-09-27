@@ -1,4 +1,4 @@
-# Alt text linter skill (alt-text-linter-skill)
+# Alt text linter skill
 ![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)
 ![Made with VS Code](https://img.shields.io/badge/Made%20with-VS%20Code-blue?logo=visual-studio-code)
 
