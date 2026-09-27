@@ -5,7 +5,14 @@
 An AI-driven accessibility linter and specification designed for technical documentation repositories and docs-as-code workflows. Codified as a vendor-agnostic Agent Skill (`SKILL.md`), this tool enforces WCAG 2.1/2.2 Non-Text Content (1.1.1) compliance, character budgets, prefix conventions, and functional visual precedence across technical documentation assets.
 
 ---
+## Key features and rule architecture
 
+* **Contextual outcome validation:** Replaces generic labels ("A screenshot of a dialog box") with explicit, user-facing outcomes.
+* **Bounded character budgets:** Enforces a 125-character cap and a 10-character floor, with built-in exemptions for action labels, brand logos, and decorative assets.
+* **Hybrid asset tie-breaking:** Resolves UI vs. diagram ambiguities using preceding Markdown context while ignoring non-rendered comments or frontmatter.
+* **Interactive element precedence:** Prioritizes link actions over static brand identity for clickable assets (e.g., active logos require navigation targets).
+* **Tri-state verdict engine:** Returns explicit `PASS`, `ACTION REQUIRED`, or `NEEDS CONTEXT` audit outcomes to eliminate ambiguous AI inferences.
+---
 ## Quick start guide
 
 ### To test this linter:
@@ -27,16 +34,6 @@ An AI-driven accessibility linter and specification designed for technical docum
 
 #### Option C: CI/CD pipeline translation
 Use the deterministic rule logic in `SKILL.md` to author static prose checks in tools like **Vale** or **Spectral** for automated PR checks.
-
----
-
-## Key features and rule architecture
-
-* **Contextual outcome validation:** Replaces generic labels ("A screenshot of a dialog box") with explicit, user-facing outcomes.
-* **Bounded character budgets:** Enforces a 125-character cap and a 10-character floor, with built-in exemptions for action labels, brand logos, and decorative assets.
-* **Hybrid asset tie-breaking:** Resolves UI vs. diagram ambiguities using preceding Markdown context while ignoring non-rendered comments or frontmatter.
-* **Interactive element precedence:** Prioritizes link actions over static brand identity for clickable assets (e.g., active logos require navigation targets).
-* **Tri-state verdict engine:** Returns explicit `PASS`, `ACTION REQUIRED`, or `NEEDS CONTEXT` audit outcomes to eliminate ambiguous AI inferences.
 
 ---
 
